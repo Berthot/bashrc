@@ -23,7 +23,7 @@ export PATH
 alias google="nohup google-chrome > /dev/null 2>&1 & disown"
 
 
-unction goo() {
+function goo() {
         google-chrome google.com/search?q="$*" > /dev/null 2>&1 &
         disown
 }

@@ -20,7 +20,6 @@ export PATH
 
 
 # User specific aliases and functions
-alias google="nohup google-chrome > /dev/null 2>&1 & disown"
 
 
 function goo() {
@@ -28,17 +27,14 @@ function goo() {
         disown
 }
 
-
-alias ff='nohup firefox & 2> /dev/null $ disown; exit;'
-
-
 function fire() {
         firefox google.com/search?q="$*" > /dev/null 2>&1 &
         disown
 }
 
+alias google="nohup google-chrome > /dev/null 2>&1 & disown"
 
-
+alias ff='nohup firefox & 2> /dev/null $ disown; exit;'
 
 alias calc='bc -l'
 alias root='sudo -i'
@@ -48,25 +44,9 @@ alias gcm='git commit-m'
 alias ga='git add'
 alias gall='git add .'
 
+alias test='psql -h localhost -U my_name -d test'
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bertho/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev>
-
-
-
-
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/bertho/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bertho/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/bertho/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+alias monitor_default='xrandr --output eDP-1-1 --primary'
+alias monitor_first='xrandr --output HDMI-1-1 --primary'
 
 alias orlando="nohup jupyter-lab > /dev/null 2>&1 &"
